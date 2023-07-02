@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Roboto-Medium-500';
+    src: url('../Assets/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-ExtraBold-800';
+    src: url('../Assets/fonts/Rubik-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-SemiBold-600';
+    src: url('../Assets/fonts/Rubik-SemiBold.ttf');
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+/* EVENT LIST */
+
+.event-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 7%;
+    width: 87%;
+    padding-left: 8vh;
+    padding-right: 8vh;    
+    height: 30vh;
+    justify-content: space-between;
+    margin-top: 6vh;
+    margin-bottom: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-list-item{
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 1.5vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-list img{
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+}
+
+.event-list-info{
+    margin: auto;
+    width: 60%;
+}
+
+.event-list-name{
+    font-family: 'Rubik-ExtraBold-800';
+    font-style: normal;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    margin: auto;
+}
+
+.event-list-details{
+    font-family: 'Roboto-Medium-500';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+/*EVENT MAIN */
+
+.event-main{
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-left: 8vh;
+    padding-right: 8vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 80%;
+    margin: auto;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+.event-main img{
+    transform: scale(75%);
+    /* height: 400px; */
+    margin: -40px;
+    border-radius: 20px;
+}
+
+.event-main-time{
+    filter: opacity(90%);
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    background-color: #FFECA7;
+    border-radius: 40px;
+    height: fit-content;
+    width: fit-content;
+    padding-right: 1%;
+    padding-left: 0.5%;
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik-SemiBold-600';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.event-main-time img{
+    transform: scale(90%);
+    margin: 0%;
+}
+
+.event-main-info{
+    margin: auto;
+}
+
+.event-main-name{
+    font-family: 'Rubik-ExtraBold-800';
+    font-style: normal;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    margin: auto;
+}
+
+.event-main-details{
+    font-family: 'Roboto-Medium-500';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:768px) {
+
+    /* EVENT MAIN */
+
+    .event-main{
+        padding-left: 2vh;
+        padding-right: 2vh;
+        width: 80%;
+        margin: auto;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+
+    .event-main img{
+        margin-top: 10px;
+        height: 75%;
+        margin-bottom: -50px;
+    }
+
+
+    .event-main-name{
+        font-size: 30px;
+        line-height: 34px;
+    }
+    
+    .event-main-details{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .event-main-time img{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .event-main-time{
+        top: 3%;
+    }
+
+
+    /* EVENT LIST */
+
+    .event-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        width: 80%;
+        padding-left: 0%;
+        padding-right: 0%;
+        height: fit-content;
+        margin-top: 6vh;
+        margin-bottom: 10vh;
+    }
+
+    .event-list-name{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .event-list-details{
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+}
+
+

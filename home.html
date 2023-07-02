@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockRE-Home</title>
+    <link rel="stylesheet" href="Styles/home.css">
+    <link rel="stylesheet" href="Styles/headerFooter.css">
+    <link rel="shortcut icon" href="Assets/FootLockRE_Favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo" class="header-logo">
+            <nav class="header-nav">
+                <a class="header-navigation-current">Home</a>
+                <a class="header-navigation" href="shoes.html">Shoes</a>
+                <a class="header-navigation" href="aboutUs.html">About Us</a>
+                <a class="header-navigation" href="events.html">Events</a>
+                <a class="header-navigation" href="subscribe.html">Subscribe</a>
+            </nav>
+
+            <div class="header-icons">
+                <img src="Assets/Icons/header_search.svg" alt="Search_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_shopping_cart.svg" alt="Cart_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_account.svg" alt="Account_Icon" class="header-icons-item">
+            </div>
+        </div>
+
+        <div class="header-minimize">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo"class="header-logo">            
+            <!-- <nav class="header-nav">
+                <a class="header-navigation-current">Home</a>
+                <a class="header-navigation" href="shoes.html">Shoes</a>
+                <a class="header-navigation" href="aboutUs.html">About Us</a>
+                <a class="header-navigation" href="events.html">Events</a>
+                <a class="header-navigation" href="subscribe.html">Subscribe</a>
+            </nav> -->
+            <select name="header-navigation-dropdown" id="header-navigation-dropdown" onclick="onHeaderDropdownSelected()">
+                <option value="Choose Page">Choose</option>
+                <option value="Home">Home</option>
+                <option value="Shoes">Shoes</option>
+                <option value="AboutUs">About Us</option>
+                <option value="Events">Events</option>
+                <option value="Subscribe">Subscribe</option>
+                <option value="Search">Search</option>
+                <option value="Cart">Cart</option>
+                <option value="Account">Account</option>
+            </select>
+            <!-- <img src="Assets/Icons/header_more.svg" alt="more" class="header-more"> -->
+        </div>
+    </header>
+
+    <main>
+
+        <img src="Assets/images/home_banner.png" alt="promo banner" class="home-banner">
+
+        <!-- <div class="custom-shape"> -->
+
+        <div class="home-shoes">
+            <div class="home-latest-container">
+                <img src="Assets/images/home_bg_latest.png" alt="latest arrival">
+                <!-- <img src="Assets/images/home_bg_latest.png" alt="latest arrival" class="home-bg-latest"> -->
+                <div class="home-overlay-latest">
+                    LATEST <br> &nbsp;&nbsp;&nbsp;&nbsp; ARRIVALS
+                </div>
+
+                <div class="home-latest-carousel-set">
+                    <div class="home-arrival-carousel-container">
+                        <img class="arrival-carousel-items" src="Assets/carousel/Asics GT-2000 10 Black 1011B412-020 US.png" alt="latest 1">
+                        <img class="arrival-carousel-items" src="Assets/carousel/Men's Brooks Adrenaline GTS 22.png" alt="latest 2">
+                        <img class="arrival-carousel-items" src="Assets/carousel/Brooks_Ghost_14.png" alt="latest 3">
+
+                        <img src="Assets/Icons/carousel_back.svg" alt="back Button" class="arrival-back" onclick="moveButtonArrival(-1)">
+                        <img src="Assets/Icons/carousel_next.svg" alt="next button"class="arrival-next" onclick="moveButtonArrival(1)">
+                    </div>
+    
+                    <div class="arrival-circle-group">
+                        <span class="arrival-circle"></span>
+                        <span class="arrival-circle"></span>
+                        <span class="arrival-circle"></span>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div class="home-trending-container">
+                <img src="Assets/images/home_bg_trending.png" alt="trending">
+                <!-- <img src="Assets/images/home_bg_trending.png" alt="trending" class="home-bg-trending"> -->
+                <div class="home-overlay-trending">
+                    THIS MONTH TRENDINGS
+                </div>
+
+                <div class="home-trending-carousel-set">
+                    <div class="home-trending-carousel-container">
+                        <img class="trending-carousel-items" src="Assets/carousel/Nike Air Force 1.png" alt="trending 1">
+                        <img class="trending-carousel-items" src="Assets/carousel/Nike Air Max 95.png" alt="trending 2">
+                        <img class="trending-carousel-items" src="Assets/carousel/Nike Air Max Terrascape 90.png" alt="trending 3">
+                        
+                        <img src="Assets/Icons/carousel_back.svg" alt="back Button" class="trending-back" onclick="moveButtonTrending(-1)">
+                        <img src="Assets/Icons/carousel_next.svg" alt="next button" class="trending-next" onclick="moveButtonTrending(1)">
+                    </div>
+    
+                    <div class="trending-circle-group">
+                        <span class="trending-circle"></span>
+                        <span class="trending-circle"></span>
+                        <span class="trending-circle"></span>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <div class="footer-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="logo-foot" class="footer-logo">
+            <p>© 2023 FootLockRE</p>
+            <div class="footer-social-media">
+                <a href="https://instagram.com/thessalonica_m" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_instagram.svg" alt="footer-icon-IG">
+                </a>
+                <a href="https://www.youtube.com/watch?v=8Wf8xtudpxw" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_whatsapp.svg" alt="footer-icon-WA">
+                </a>
+                <a href="https://line.me/ti/p/O43dUqyfPd" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_line.svg" alt="footer-icon-Line">
+                </a>              
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="JavaScript/carousel.js"></script>
+<script src="JavaScript/headerfooter.js"></script>
+
+
+</html>

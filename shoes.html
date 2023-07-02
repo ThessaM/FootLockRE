@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockRE-Shoes</title>
+    <link rel="stylesheet" href="Styles/shoes.css">
+    <link rel="stylesheet" href="Styles/headerFooter.css">
+    <link rel="shortcut icon" href="Assets/FootLockRE_Favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo" class="header-logo">
+            <nav class="header-nav">
+                <a class="header-navigation" href="home.html">Home</a>
+                <a class="header-navigation-current">Shoes</a>
+                <a class="header-navigation" href="aboutUs.html">About Us</a>
+                <a class="header-navigation" href="events.html">Events</a>
+                <a class="header-navigation" href="subscribe.html">Subscribe</a>
+            </nav>
+
+            <div class="header-icons">
+                <img src="Assets/Icons/header_search.svg" alt="Search_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_shopping_cart.svg" alt="Cart_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_account.svg" alt="Account_Icon" class="header-icons-item">
+            </div>
+        </div>
+        <div class="header-minimize">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo"class="header-logo">            
+            <select name="header-navigation-dropdown" id="header-navigation-dropdown" onclick="onHeaderDropdownSelected()">
+                <option value="Choose Page">Choose</option>
+                <option value="Home">Home</option>
+                <option value="Shoes">Shoes</option>
+                <option value="AboutUs">About Us</option>
+                <option value="Events">Events</option>
+                <option value="Subscribe">Subscribe</option>
+                <option value="Search">Search</option>
+                <option value="Cart">Cart</option>
+                <option value="Account">Account</option>
+            </select>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="main-container">
+
+            <div class="shoes-selection-open" id="shoes-selection-open">
+                <img src="Assets/Icons/shoes_back.svg" alt="shoes-back" class="shoe-selection-button-back" onclick="openSelection()">
+                <h2>Price Range</h2>
+                <div class="shoe-price-range">
+                    <div>
+                        <input type="checkbox" name="price-checkbox1" id="price-checkbox1" class="shoe-checkbox">
+                        <label for="price-checkbox1" >Rp. 0 - Rp.499.000</labl>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="price-checkbox2" id="price-checkbox2" class="shoe-checkbox">
+                        <label for="price-checkbox2">Rp. 500.000 - Rp. 999.000</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="price-checkbox3" id="price-checkbox3" class="shoe-checkbox">
+                        <label for="price-checkbox3">Rp. 1.000.000 - Rp. 1.499.000</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="price-checkbox4" id="price-checkbox4" class="shoe-checkbox">
+                        <label for="price-checkbox4"> Rp. 1.500.000</label>
+                    </div>
+                
+                </div>
+
+                <hr>
+
+                <h2>Category</h2>
+                <div class="shoe-category">
+                    <div>
+                        <input type="checkbox" name="category-checkbox1" id="category-checkbox1" class="shoe-checkbox">
+                        <label for="category-checkbox1">Casual</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="category-checkbox2" id="category-checkbox2" class="shoe-checkbox">
+                        <label for="category-checkbox2">Sport</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="category-checkbox3" id="category-checkbox3" class="shoe-checkbox">
+                        <label for="category-checkbox3">Formal</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="category-checkbox4" id="category-checkbox4" class="shoe-checkbox">
+                        <label for="category-checkbox4">Sneakers</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="category-checkbox5" id="category-checkbox5" class="shoe-checkbox">
+                        <label for="category-checkbox5" >Sandals</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="category-checkbox6" id="category-checkbox6" class="shoe-checkbox">
+                        <label for="category-checkbox6">Running Shoes</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h2>Size</h2>
+
+                <select name="shoe-size-dropdown" class="shoe-size-dropdown">
+                    <option value="All">All</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                </select>
+
+            </div>
+
+            <div class="shoes-selection-close" id="shoes-selection-close">
+                <img src="Assets/Icons/shoes_close_menu.svg" alt="shoe-close-menu" onclick="closeSelection()">
+            </div>
+
+            <div class="shoe-content">
+                <div class="shoe-content-head">
+                    <h1>Result</h1>
+
+                    <div class="shoe-sort-container" onchange="sortDropDownOnChanged()">
+                        <select name="shoe-sort-dropdown" class="shoe-sort-dropdown" id="shoe-sort-dropdown">
+                            <option value="Default">Default</option>
+                            <option value="Name">Name</option>
+                            <option value="Price">Price</option>
+                        </select>
+
+                        <div class="shoe-sort-detail-name" id="shoe-sort-detail-name">A to Z</div>
+                        <div class="shoe-sort-detail-price" id="shoe-sort-detail-price">High to Low</div>
+                        <img src="Assets/Icons/shoes_sort_switch.svg" alt="shoes_sort_switch" id="sort-switch-button" onclick="sortButtonOnClick()">
+                    </div>  
+                </div>
+
+                <div class="shoe-content-body">
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/1_ASICS GT-2000 10 Black Marathon Running Shoes.png" alt="shoe 1">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>ASICS GT-2000 10 Black Marathon Running Shoes</h3>
+                                <h4>Rp.1.500.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" id="addButton" onclick="addButtonOnCLick(0)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" id="addedButton" onclick="addedButtonOnCLick(0)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline"
+                                id="favoriteOutline" onclick="favoriteOutlineOnClick(0)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill"
+                                id="favoriteFill" onclick="favoriteFillOnClick(0)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/2_Salomon X Ultra 3 GTX Hiking Shoes.png" alt="shoe 2">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Salomon X Ultra 3 GTX Hiking Shoes</h3>
+                                <h4>Rp.2.750.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(1)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(1)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(1)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(1)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/3_TRABUCO MAX Mens Trail Running Shoes.png" alt="shoe 3">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>TRABUCO MAX Mens Trail Running Shoes</h3>
+                                <h4>Rp.3.500.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(2)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(2)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(2)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(2)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/4_Adrenaline GTS 22 Men's road- running shoes.png" alt="shoe 4">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Adrenaline GTS 22 Men's road-running shoes</h3>
+                                <h4>Rp.2.150.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add"  onclick="addButtonOnCLick(3)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(3)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(3)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(3)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/5_Brooks Ghost 14- running shoes.png" alt="shoe 5">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Ghost 14 road-running shoes</h3>
+                                <h4>Rp.1.500.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(4)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(4)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(4)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(4)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/6_NIKE AIR MAX 1 ‘Ugly Duckling’ Sneaker.png" alt="shoe 6">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>NIKE AIR MAX 1 ‘Ugly Duckling’ Sneaker</h3>
+                                <h4>Rp.2.450.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(5)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(5)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(5)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(5)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/7_Nike Men's Undefeated x Air Force 1 Low.png" alt="shoe 7">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Men's Undefeated x Air Force 1 Low</h3>
+                                <h4>Rp.3.600.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(6)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(6)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(6)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(6)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/8_Air Jordan 1 Low Se Wear Away.png" alt="shoe 8">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Air Jordan 1 Low Se Wear Away</h3>
+                                <h4>Rp.2.550.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(7)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(7)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(7)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(7)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/9_Nike Vista Sandal Black White.png" alt="shoe 9">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Vista Sandal Black White</h3>
+                                <h4>Rp.750.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(8)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(8)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(8)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(8)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/10_Nike Men's Air Max Excee.png" alt="shoe 10">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Men's Air Max Excee</h3>
+                                <h4>Rp.1.350.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(9)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(9)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(9)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(9)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/11_Nike Men's Victori One.png" alt="shoe 11">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Men's Victori Ones</h3>
+                                <h4>Rp.450.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(10)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(10)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(10)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(10)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/12_Nike Men's Air Max 90 Terrascape.png" alt="shoe 12">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Men's Air Max 90 Terrascape</h3>
+                                <h4>Rp.2.000.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(11)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(11)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(11)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(11)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/13_Nike Revolution 6 Men's Road Running Shoes.png" alt="shoe 13">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Revolution 6 Men's Road Running Shoes</h3>
+                                <h4>Rp.1.000.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(12)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(12)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline"
+                                onclick="favoriteOutlineOnClick(12)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill"
+                                onclick="favoriteFillOnClick(12)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/14_Nike Air Force 1.png" alt="shoe 14">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Air Force 1</h3>
+                                <h4>Rp.2.250.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(13)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(13)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(13)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(13)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/15_Nike Air Presto Fj2685-001 Men's.png" alt="shoe 15">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Nike Air Presto Fj2685-001 Men's</h3>
+                                <h4>Rp.1.630.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(14)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(14)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(14)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(14)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/16_Leather men’s sandals.png" alt="shoe 16">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Leather men's sandals</h3>
+                                <h4>Rp.580.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add"  onclick="addButtonOnCLick(15)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(15)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(15)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(15)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/17_Adidas Superstar.png" alt="shoe 17">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Adidas Superstar</h3>
+                                <h4>Rp.995.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(16)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(16)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(16)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(16)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-content-card">
+                        <img src="Assets/shoes/18_Woodland mens Sandal.png" alt="shoe 18">
+                        <div class="shoe-content-card-details">
+                            <div class="shoe-content-card-title">
+                                <h3>Woodland mens Sandal</h3>
+                                <h4>Rp.3.290.000</h4>
+                            </div>
+                            <span class="shoe-content-card-options">
+                                <span class="shoe-content-card-button-add" onclick="addButtonOnCLick(17)">
+                                    <img src="Assets/Icons/shoes_add_cart.svg" alt="shoes_add_cart">
+                                    Add
+                                </span>
+                                <span class="shoe-content-card-button-added" onclick="addedButtonOnCLick(17)">
+                                    <img src="Assets/Icons/shoes_added_cart.svg" alt="shoes_added_cart" class="cart-added">
+                                    <span class="cart-added">Added</span>
+                                    <img src="Assets/Icons/shoes_remove_cart.svg" alt="shoes_remove_cart" class="cart-remove">
+                                    <span class="cart-remove">remove</span>
+                                </span>
+                                <img src="Assets/Icons/shoes_favorite_outline.svg" alt="shoes_favorite_outline" class="shoe-content-card-favorite-outline" onclick="favoriteOutlineOnClick(17)">
+                                <img src="Assets/Icons/shoes_favorite_fill.svg" alt="shoes_favorite_fill" class="shoe-content-card-favorite-fill" onclick="favoriteFillOnClick(17)">
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="logo-foot" class="footer-logo">
+            <p>© 2023 FootLockRE</p>
+            <div class="footer-social-media">
+                <a href="https://instagram.com/thessalonica_m" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_instagram.svg" alt="footer-icon-IG">
+                </a>
+                <a href="https://www.youtube.com/watch?v=8Wf8xtudpxw" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_whatsapp.svg" alt="footer-icon-WA">
+                </a>
+                <a href="https://line.me/ti/p/O43dUqyfPd" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_line.svg" alt="footer-icon-Line">
+                </a>              
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+    <script src="JavaScript/shoes.js"></script>
+    <script src="JavaScript/headerfooter.js"></script>
+    
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockRE-Subscribe</title>
+    <link rel="stylesheet" href="Styles/subscribe.css">
+    <link rel="stylesheet" href="Styles/headerFooter.css">
+    <link rel="shortcut icon" href="Assets/FootLockRE_Favicon.png" type="image/x-icon">
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo" class="header-logo">
+            <nav class="header-nav">
+                <a class="header-navigation" href="home.html">Home</a>
+                <a class="header-navigation" href="shoes.html">Shoes</a>
+                <a class="header-navigation" href="aboutUs.html">About Us</a>
+                <a class="header-navigation" href="events.html">Events</a>
+                <a class="header-navigation-current">Subscribe</a>
+            </nav>
+
+            <div class="header-icons">
+                <img src="Assets/Icons/header_search.svg" alt="Search_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_shopping_cart.svg" alt="Cart_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_account.svg" alt="Account_Icon" class="header-icons-item">
+            </div>
+        </div>
+        <div class="header-minimize">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo"class="header-logo">            
+            <select name="header-navigation-dropdown" id="header-navigation-dropdown" onclick="onHeaderDropdownSelected()">
+                <option value="Choose Page">Choose</option>
+                <option value="Home">Home</option>
+                <option value="Shoes">Shoes</option>
+                <option value="AboutUs">About Us</option>
+                <option value="Events">Events</option>
+                <option value="Subscribe">Subscribe</option>
+                <option value="Search">Search</option>
+                <option value="Cart">Cart</option>
+                <option value="Account">Account</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="subscribe-bg">
+
+            <div class="subscribe-overlay">
+
+                <div class="subscribe-form-layout">
+
+                    <div>
+                        <h1>WANT TO STAY UPDATED?</h1>
+                        <h2>Join our newsletter <br> and receive new offers every month!</h2>
+                    </div>
+        
+        
+                    <form id="form" class="form">
+                        <input type="text" id="nameTextField" class="form-text-field" placeholder="Name" onchange="nameOnChanged()">
+                        <br>
+                        <input type="text" id="emailTextField" class="form-text-field" placeholder="Email" onchange="emailOnChanged()">
+                        <br>
+                        <select id="countryDropDown" class="form-drop-down" onchange="onCountryChanged()">
+                            <option value="Default">Select a Country</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Korea">Korea</option>
+                        </select>
+                        <br>
+                        <input type="text" id="phoneTextField" class="form-text-field" placeholder="Phone Number" onchange="onPhoneChanged()">
+                        <br>
+                        <div>
+                            <input type="checkbox" id="tosCheckbox" class="form-CheckBox" name="tosCheckbox">
+                            <label for="tosCheckbox" class="checkbox-hint">I’ve read and agreed to </label>
+                            <label class="checkbox-tos">terms and conditions</label>
+                        </div>
+                        <br>
+                        <input type="submit" id="submitButton" class="form-button" value="SUBSCRIBE">
+        
+                    </form>
+    
+                </div>
+    
+                <img src="Assets/images/subscribe_image.png" alt="subscribe_image">
+
+            </div>  
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="logo-foot" class="footer-logo">
+            <p>© 2023 FootLockRE</p>
+            <div class="footer-social-media">
+                <a href="https://instagram.com/thessalonica_m" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_instagram.svg" alt="footer-icon-IG">
+                </a>
+                <a href="https://www.youtube.com/watch?v=8Wf8xtudpxw" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_whatsapp.svg" alt="footer-icon-WA">
+                </a>
+                <a href="https://line.me/ti/p/O43dUqyfPd" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_line.svg" alt="footer-icon-Line">
+                </a>              
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+<script src="JavaScript/subscribe_validation.js"></script>
+<script src="JavaScript/headerfooter.js"></script>
+
+</html>

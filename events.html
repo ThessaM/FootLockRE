@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockRE-Events</title>
+    <link rel="stylesheet" href="Styles/events.css">
+    <link rel="stylesheet" href="Styles/headerFooter.css">
+    <link rel="shortcut icon" href="Assets/FootLockRE_Favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo" class="header-logo">
+            <nav class="header-nav">
+                <a class="header-navigation" href="home.html">Home</a>
+                <a class="header-navigation" href="shoes.html">Shoes</a>
+                <a class="header-navigation" href="aboutUs.html">About Us</a>
+                <a class="header-navigation-current">Events</a>
+                <a class="header-navigation" href="subscribe.html">Subscribe</a>
+            </nav>
+
+            <div class="header-icons">
+                <img src="Assets/Icons/header_search.svg" alt="Search_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_shopping_cart.svg" alt="Cart_Icon" class="header-icons-item">
+                <img src="Assets/Icons/header_account.svg" alt="Account_Icon" class="header-icons-item">
+            </div>
+        </div>
+        <div class="header-minimize">
+            <img src="Assets/FootLockRE_Logo.png" alt="FootLockRE_Logo"class="header-logo">            
+            <select name="header-navigation-dropdown" id="header-navigation-dropdown" onclick="onHeaderDropdownSelected()">
+                <option value="Choose Page">Choose</option>
+                <option value="Home">Home</option>
+                <option value="Shoes">Shoes</option>
+                <option value="AboutUs">About Us</option>
+                <option value="Events">Events</option>
+                <option value="Subscribe">Subscribe</option>
+                <option value="Search">Search</option>
+                <option value="Cart">Cart</option>
+                <option value="Account">Account</option>
+            </select>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="event-main">
+            <img src="Assets/images/events_1.png" alt="event-main">
+            <span class="event-main-time">
+                <img src="Assets/Icons/events_time.svg" alt="events_time">
+                Coming Soon
+            </span>
+            <div class="event-main-info">
+                <p class="event-main-name">JAKARTA SNEAKERS DAY</p>
+                <p class="event-main-details">Monday, 23 April 2023 <br> 08.00 - 21.00 WIB <br> At Senayan City, Jakarta, Indonesia</p>
+            </div>
+            
+        </div>
+
+        <div class="event-list">
+            <div class="event-list-item">
+                <img src="Assets/images/events_2.png" alt="events_2">
+                <div class="event-list-info">
+                    <p class="event-list-name">SNEAKERS CON 2023</p>
+                    <p class="event-list-details">Friday, 20 June 2023 <br> 12.00 - 21.00 WIB <br> At Indonesia Convention Exhibition (ICE), BSD City, Indonesia</p>
+                </div>
+            </div>
+
+            <div class="event-list-item">
+                <img src="Assets/images/events_3.png" alt="events_3">
+                <div class="event-list-info">
+                    <p class="event-list-name">SNEAKFEST SNEAKERS EXPO</p>
+                    <p class="event-list-details">Friday, 30 June 2023 <br> 09.00 - 21.00 WIB <br> At Central Park, West Jakarta, Indonesia</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-view">
+            <img src="Assets/FootLockRE_Logo.png" alt="logo-foot" class="footer-logo">
+            <p>© 2023 FootLockRE</p>
+            <div class="footer-social-media">
+                <a href="https://instagram.com/thessalonica_m" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_instagram.svg" alt="footer-icon-IG">
+                </a>
+                <a href="https://www.youtube.com/watch?v=8Wf8xtudpxw" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_whatsapp.svg" alt="footer-icon-WA">
+                </a>
+                <a href="https://line.me/ti/p/O43dUqyfPd" class="footer-social-media-item">
+                    <img src="Assets/Icons/footer_line.svg" alt="footer-icon-Line">
+                </a>              
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+<script src="JavaScript/headerfooter.js"></script>
+
+</html>
